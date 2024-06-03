@@ -95,18 +95,13 @@ mismoElegido tribu mision gusano = reconocimientos (hallarElegido tribu) == reco
 --Al realizar una mision con una lista infinita, Haskell no podrá terminar de realizar la operacion
 --ya que como la lista es infinita, debe reccorrer todos los elementos para tener un resultado final
 
---ejemplo: ghci> realizacionColectiva (cycle tribu1) domarGusano gusano1
---[UnFremen {nombre = "Stilgar", toleranciaEspecia = 250.0, titulos = ["Guia","Domador","Domador"], cantReconocientos = 3},
---UnFremen {nombre = "Pedro", toleranciaEspecia = 1100.0, titulos = ["Domador","Guia","Guerrero","Domador"], cantReconocientos = 2},
---UnFremen {nombre = "Stilgar", toleranciaEspecia = 250.0, titulos = ["Guia","Domador","Domador"], cantReconocientos = 3},
---UnFremen {nombre = "Pedro", toleranciaEspecia = 1100.0, titulos = ["Domador","Guia","Guerrero","Domador"], cantReconocientos = 2}, ... y sigue infinitamente
-
+--ejemplo: ghci> realizarMisionColectiva (cycle tribu1) domarGusano gusano1
 
 --b)Qué pasaría con una tribu de infinitos Fremen al querer saber si hay algún candidato a ser elegido?
 --Debido a que haskell es peresozo, al realizar la operacion any algunCandidato lista, Haskell no necesita recorrer toda la lista
 --porque al encontrar un candidato que ya es true, este devuelve True y no sigue recorriendo la lista
 
---ejemplo: ghci> algunCandidatoLista (cycle tribu1)
+--ejemplo: ghci> hayElegido (cycle tribu1)
 --               True
 
 --c)Qué pasaría con una tribu de infinitos Fremen al encontrar al elegido?
