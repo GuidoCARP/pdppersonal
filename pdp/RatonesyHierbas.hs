@@ -69,8 +69,6 @@ sufijosInfecciosas = [ "sis", "itis", "emia", "cocos"]
 pdepCilina::Medicamento
 pdepCilina=map hierbaVerde sufijosInfecciosas
 
-{-Hacer la función que encuentra la cantidadIdeal. Recibe una condición y dice cuál es el primer número natural que la cumple.-}
-
 cantidadIdeal :: (Int -> Bool) -> Int
 cantidadIdeal condicion = head (filter condicion [1..])
 
